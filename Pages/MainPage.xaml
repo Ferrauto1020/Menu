@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Menu.Pages.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="DarkGoldenrod">
+       <Grid RowDefinitions="Auto, *, Auto"
+             Padding="15,25">
+              <Label Grid.RowSpan="0"
+                     Text="Pizza World"
+                     FontSize="50"
+                     HorizontalOptions="Center"
+                     FontAttributes="Bold"/>
+              <Image Grid.Row="1"
+                     Source="pizza1.png"
+                     HeightRequest="250"
+                     WidthRequest="250"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+              <VerticalStackLayout Grid.Row="2"
+                                   Spacing="15">
+                     <Label Text="The Taste of Italian Pizza"
+                            FontAttributes="Bold"
+                            FontSize="40"/>
+                     <Label Text="Feel the taste of mouth watering pizza from country"
+                            FontSize="18"
+                            LineHeight="1.2"/>
+                     <Border StrokeShape="RoundRectangle 25"
+                             StrokeThickness="0"
+                             BackgroundColor="Goldenrod"
+                             HeightRequest="50">
+                            <Border.GestureRecognizers>
+                                   <TapGestureRecognizer Tapped="TapGestureRecognize"/>
+                            </Border.GestureRecognizers>
+                            <HorizontalStackLayout HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   Spacing="10"
+                                                   Padding="0,5">
+                                   <Label Text="Get Started"
+                                          VerticalOptions="Center"/>
+                                   <Image Source="right_arrow.png"
+                                          VerticalOptions="Center"
+                                          HeightRequest="30"/>
+                            </HorizontalStackLayout>
+                     </Border>
+              </VerticalStackLayout>
+       </Grid>
+</ContentPage>
